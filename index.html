@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Warm Modern Apartment — Interactive Walkthrough</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
+    {"imports":{"three":"./vendor/three.module.js"}}
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">OPTION 06 · CONCEPT WALKTHROUGH</p>
+      <h1>Warm Modern Apartment</h1>
+    </div>
+    <div class="actions">
+      <button id="door-toggle" class="secondary">Open TV room doors</button>
+      <button id="download">Download current view</button>
+    </div>
+  </header>
+  <main>
+    <aside class="rail" aria-label="Room navigation">
+      <p class="rail-title">Explore rooms</p>
+      <button data-view="overview" class="active"><span>01</span> Overview</button>
+      <button data-view="master"><span>02</span> Master suite</button>
+      <button data-view="spa"><span>03</span> Bath &amp; spa</button>
+      <button data-view="baby"><span>04</span> Baby room</button>
+      <button data-view="bedroom"><span>05</span> Secondary room</button>
+      <button data-view="living"><span>06</span> Living room</button>
+      <button data-view="tv"><span>07</span> TV room</button>
+      <button data-view="wine"><span>08</span> Wine cellar</button>
+      <button data-view="dining"><span>09</span> Dining &amp; kitchen</button>
+      <div class="legend">
+        <p>Drag to orbit · scroll to zoom</p>
+        <p><i class="walnut"></i> Walnut <i class="stone"></i> Stone <i class="bronze"></i> Bronze</p>
+      </div>
+    </aside>
+    <section id="stage" aria-label="Interactive 3D apartment model">
+      <div id="loading">Building apartment…</div>
+      <div class="view-label"><span id="view-name">Overview</span><small id="view-note">Complete residence · plan-informed concept</small></div>
+    </section>
+  </main>
+  <footer>
+    <span>Concept visualization based on the supplied Option 06 plan and reference deck.</span>
+    <span>Approximate geometry · design intent preview</span>
+  </footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
